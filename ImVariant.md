@@ -1,4 +1,4 @@
-# ImVariant Remade
+# ImVariant made by ProB1
 
 ## Functions
 
@@ -10,14 +10,15 @@
 ### Label
 
 ```c++
-ImVariant::Label(remaking...);
+ImVariant::Label(const std::string& label_text, int itemid, ImVariant_SizeFlags flag, ImVariant_LabelFlags flag2)
 ```
 
 Usage:
 ```c++
-variantlist_t variant = { "OnDialogRequest" };
-ImVariant::Label("Hello!", variant, 1, true, ImVariant_SpacerFlagSmall);
-ImVariant::Send(variant);
+variantlist_t variant = { "OnDialogRequest" }; // dialog type
+ImVariant::Label("Hello!", NULL, ImVariant_SizeFlags::Small, ImVariantLabelFlags::Normal); // adds normal label without icon
+ImVariant::Send(variant); // sends variant list
+ImVariant::Reset(); // resets saved variant
 ```
 Result:
 ```
