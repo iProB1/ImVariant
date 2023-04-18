@@ -4,13 +4,30 @@
 
 * [Begin](#begin)
 * [Destroy](#destroy)
-* [GetVariantType](#getvarianttype)
+* [PrintVariant](#printvariant)
 * [Label](#label)
+
+### PrintVariant
+
+```c++
+ImVariant::GetVariantType(int param, variantlist_t& var);
+```
+
+Usage:
+```c++
+variantlist_t variant = { "OnConsoleMessage", "Hello World!" };
+ImVariant::PrintVariant(1, variant); //prints param 1 in variant
+```
+
+Result:
+```
+Prints Hello World!
+```
 
 ### Label
 
 ```c++
-ImVariant::Label(const std::string& label_text, int itemid, ImVariant_SizeFlags flag, ImVariant_LabelFlags flag2)
+ImVariant::Label(const std::string& label_text, int itemid, ImVariant_SizeFlags flag, ImVariant_LabelFlags flag2);
 ```
 
 Usage:
