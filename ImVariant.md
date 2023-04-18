@@ -10,7 +10,7 @@
 ### PrintVariant
 
 ```c++
-ImVariant::GetVariantType(int param, variantlist_t& var);
+ImVariant::PrintVariant(int param, variantlist_t& var);
 ```
 
 Usage:
